@@ -7,3 +7,4 @@ Homestead.yaml
 .env
 .DS_Store
 /storage
+.vagrant
