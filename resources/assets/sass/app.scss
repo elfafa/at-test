@@ -7,3 +7,18 @@
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.form-control {
+	margin-top: 5px;
+}
+
+#ticketsList tbody tr {
+	&:first-child {
+		background-color: yellow;
+		color           : black;
+	}
+	&:last-child {
+		background-color: green;
+		color           : white;
+	}
+}

@@ -18,8 +18,7 @@ class CreateTicketsTable extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->string('email');
-            $table->string('ticket_id')->unique();
-            $table->boolean('redeemed');
+            $table->string('token')->unique();
             $table->timestamp('redeemed_at')->nullable();
             $table->timestamps();
         });

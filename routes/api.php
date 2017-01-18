@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+
+Route::get('/tickets', 'TicketsController@index');
+
+Route::post('/tickets/store', 'TicketsController@store');
+
+Route::post('/tickets/update', 'TicketsController@update');
