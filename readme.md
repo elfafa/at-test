@@ -1,27 +1,47 @@
-# Laravel PHP Framework
+# Installation to test it
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+## Get local version
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+First of all, get the current source code on your machine.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+```
+git clone git@github.com:elfafa/activeticketing-test.git
+```
 
-## Official Documentation
+## Vagrant
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+To easily install and test the store, with no compatibility problem, use a Virtual Machine, thanks to Vagrant.
 
-## Contributing
+* Get [Vagrant](https://www.vagrantup.com/) and install it
+* Go to the main repository of your local source code
+* Start the VM : `vagrant up`
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+## Update your local DNS
 
-## Security Vulnerabilities
+Add the following line into your `/etc/hosts` file
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+```
+192.168.56.101 activeticketing.dev
+```
 
-## License
+## Initialization of database
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Access to the VM
+
+```
+vagrant ssh
+```
+
+On the VM, go to the repository an launch migrations/seeds commands
+
+```
+cd /var/www/
+php artisan migrate:refresh --seed
+```
+
+# Test it
+
+* Website url : activeticketing.dev
+* Login/Password : test@activeticketing.com/secret
+
+If you want to erase database and restart your tests from scratch, just relaunch the migrations/seeds commands
