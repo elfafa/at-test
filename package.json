@@ -5,14 +5,24 @@
     "dev": "gulp watch"
   },
   "devDependencies": {
+    "angular": "^1.6.1",
+    "angular-mocks": "^1.6.1",
+    "angular-ui-router": "^0.3.2",
     "bootstrap-sass": "^3.3.7",
+    "browserify": "^13.3.0",
     "gulp": "^3.9.1",
+    "jasmine-core": "^2.5.2",
     "jquery": "^3.1.0",
+    "karma": "^1.4.0",
+    "karma-browserify": "^5.1.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0",
     "laravel-elixir": "^6.0.0-9",
     "laravel-elixir-vue-2": "^0.2.0",
     "laravel-elixir-webpack-official": "^1.0.2",
     "lodash": "^4.16.2",
     "vue": "^2.0.1",
-    "vue-resource": "^1.0.3"
+    "vue-resource": "^1.0.3",
+    "watchify": "^3.8.0"
   }
 }

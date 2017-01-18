@@ -11,7 +11,7 @@ require('./bootstrap');
  * Load controller and service for tickets
  */
 
-require('./controllers/mainCtrl');
-require('./services/ticketService');
+require('./controllers/ticketCtrl');
+require('./services/ticketSrv');
 
-var ticketApp = angular.module('ticketApp', ['mainCtrl', 'ticketService']);
+var ticketApp = angular.module('ticketApp', ['ticketCtrl', 'ticketSrv']);

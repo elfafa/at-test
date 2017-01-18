@@ -1,7 +1,7 @@
-angular.module('mainCtrl', [])
+angular.module('ticketCtrl', [])
 
-// inject the Ticket service into our controller
-.controller('mainController', ['$scope', '$http', 'Ticket', function($scope, $http, Ticket)
+// inject the ticketFactory service into our controller
+.controller('ticketController', ['$scope', '$http', 'ticketFactory', function($scope, $http, ticketFactory)
 {
     // object to hold all the data for the new ticket form
     $scope.newData = {};
@@ -18,7 +18,7 @@ angular.module('mainCtrl', [])
     // get all the tickets first and bind it to the $scope.tickets object
     // use the function we created in our service
     // GET ALL TICKETS ==============
-    Ticket.get()
+    ticketFactory.get()
         .success(function(data) {
             $scope.tickets = data;
             $scope.loading = false;
@@ -34,12 +34,12 @@ angular.module('mainCtrl', [])
 
         // save the ticket. pass in ticket data from the form
         // use the function we created in our service
-        Ticket.save($scope.newData)
+        ticketFactory.save($scope.newData)
             .success(function(data) {
                 if (data.success) {
                     $scope.newData = {};
                     // if successful, we'll need to refresh the ticket list
-                    Ticket.get()
+                    ticketFactory.get()
                         .success(function(getData) {
                             $scope.tickets = getData;
                             $scope.loading = false;
@@ -63,13 +63,13 @@ angular.module('mainCtrl', [])
 
         // save the ticket. pass in ticket data from the form
         // use the function we created in our service
-        Ticket.update($scope.usageData)
+        ticketFactory.update($scope.usageData)
             .success(function(data) {
                 if (data.success) {
                     $scope.usageData       = {};
                     $scope.usageSuccessMsg = data.reason;
                     // if successful, we'll need to refresh the ticket list
-                    Ticket.get()
+                    ticketFactory.get()
                         .success(function(getData) {
                             $scope.tickets = getData;
                             $scope.loading = false;

@@ -1,6 +1,6 @@
-angular.module('ticketService', [])
+angular.module('ticketSrv', [])
 
-.factory('Ticket', ['$http', function($http) {
+.factory('ticketFactory', ['$http', function($http) {
 
     return {
         // get all the tickets
