@@ -16,7 +16,7 @@ class UsersTableSeeder extends Seeder
         $dt      = Carbon::now();
         $dateNow = $dt->toDateTimeString();
         DB::table('users')->insert([
-            'name'       => 'ActiveTicketing',
+            'name'       => 'AT',
             'email'      => 'test@activeticketing.com',
             'password'   => bcrypt('secret'),
             'created_at' => $dateNow,

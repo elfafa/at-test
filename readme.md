@@ -5,7 +5,7 @@
 First of all, get the current source code on your machine.
 
 ```
-git clone git@github.com:elfafa/activeticketing-test.git
+git clone git@github.com:elfafa/at-test.git activeticketing
 ```
 
 ## Vagrant
