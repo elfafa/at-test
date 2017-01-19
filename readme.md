@@ -1,12 +1,27 @@
-# Installation to test it
-
-## Get local version
+# Get local version
 
 First of all, get the current source code on your machine.
 
 ```
 git clone git@github.com:elfafa/at-test.git activeticketing
 ```
+
+Then, load dependencies
+
+```
+composer install
+npm install
+```
+
+# Unit tests
+
+Launch the following command to launch unit tests
+
+```
+karma start
+```
+
+# Installation to test it
 
 ## Vagrant
 
