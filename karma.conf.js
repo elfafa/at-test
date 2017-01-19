@@ -18,8 +18,7 @@ module.exports = function(config) {
         './node_modules/angular/angular.js',                             // angular
         './node_modules/angular-ui-router/release/angular-ui-router.js', // ui-router
         './node_modules/angular-mocks/angular-mocks.js',                 // loads our modules for tests
-        './ressources/assets/js/app.js',                                 // our angular app
-//        './public/js/app.js',                                 // our angular app
+        './public/js/app.js',                                            // our angular app
         './spec/*[sS]pec.js',
     ],
 

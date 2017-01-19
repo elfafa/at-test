@@ -2,7 +2,7 @@
 
 describe('Controller: ticketController', function () {
 
-    var ticketController, ticketFactory, scope;
+    //var ticketController, ticketFactory, scope;
 
     // load the controller's module
     // beforeEach(function() {

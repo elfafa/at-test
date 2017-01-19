@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" ng-app="ticketApp" ng-controller="mainController">
+<div class="container" ng-app="ticketApp" ng-controller="ticketController">
     <div class="row">
         <div class="col-sm-12 col-md-5">
             <h1>Use a ticket</h1>
